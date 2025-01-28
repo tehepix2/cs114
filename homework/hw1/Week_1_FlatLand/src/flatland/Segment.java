@@ -7,6 +7,7 @@ public class Segment {
 	public Segment (Point a, Point b) {
 		this.a = a;
 		this.b = b;
+		// e
 	}
 	
 	public void setEndPoints(Point a, Point b) {
@@ -27,7 +28,7 @@ public class Segment {
 	
 	// This is a stub, fill in the correct implementation
 	public double getSlope() {
-		return 0; //TODO
+		return 0; //TOD
 		
 	}
 
