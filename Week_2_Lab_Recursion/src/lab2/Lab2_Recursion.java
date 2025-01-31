@@ -2,6 +2,7 @@ package lab2;
 
 public class Lab2_Recursion {
     public static void main(String[] args) {
+        int[] numArray = {3, 5, 6, 2, 6, 10, 12, 22, 10, 3};
         System.out.println("Hello World!");
 
         System.out.println("Calculated using a formula: " + triangularFormula(5)); // * This uses the n(n+1)/2 formula
@@ -13,6 +14,8 @@ public class Lab2_Recursion {
         System.out.println("Factorial calculated using recursion: " + factorialRecursion(5)); // * This calculates the factorial by using recursion
         
         System.out.println("Exponentiation using recursion: " + exponentRecursion(5, 3)); // * This calculates a base to the power of an exponent by using recursion
+    
+        System.out.println("Biggest number in array: " + largestNumber(numArray, 9));
     }
 
     public static int triangularFormula(int n) {
@@ -39,5 +42,10 @@ public class Lab2_Recursion {
     public static int exponentRecursion(int base, int power) { // * Some extra practice
         if (power == 0) {return 1;}
         return base * exponentRecursion(base, power - 1);
+    }
+
+    public static int largestNumber(int[] numbers, int index) {
+        if (index == 0) {return numbers[0];}
+        return java.lang.Math.max(numbers[index], largestNumber(numbers, index - 1));
     }
 }
