@@ -7,7 +7,7 @@ public class Segment {
 	public Segment (Point a, Point b) {
 		this.a = a;
 		this.b = b;
-		// e
+		
 	}
 	
 	public void setEndPoints(Point a, Point b) {
@@ -20,16 +20,18 @@ public class Segment {
 		this.b = new Point(x2, y2);
 	}
 	
-	// This is a stub, fill in the correct implementation
-	public double GetLength() {
-		return 0; //TODO
+	public double getLength() {
+		return java.lang.Math.sqrt(java.lang.Math.pow((b.xCoord() - a.xCoord()), 2) + java.lang.Math.pow((b.yCoord() - a.yCoord()), 2));
 		
 	}
 	
-	// This is a stub, fill in the correct implementation
 	public double getSlope() {
-		return 0; //TOD
+		return (b.yCoord() - a.yCoord()) / (b.xCoord() - a.xCoord());
 		
+	}
+	@Override
+	public String toString() {
+		return a.toString() + " - " + b.toString();
 	}
 
 }

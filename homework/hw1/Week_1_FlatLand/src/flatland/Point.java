@@ -26,5 +26,9 @@ public class Point {
 		x = newX;
 		y = newY;
 	}
+	@Override
+	public String toString() {
+		return "(" + x + "," + y + ")";
+	}
 	
 }
