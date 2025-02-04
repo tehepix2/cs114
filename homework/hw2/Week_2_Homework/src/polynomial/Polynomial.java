@@ -61,9 +61,9 @@ public class Polynomial {
 	 /* Returns the polynomial derivative of this polynomial. 
 	 * Does NOT change this polynomial */
 	public Polynomial getDerivative() {
-		Polynomial derivative = new Polynomial(new int[] {coefficients.length - 1});
+		Polynomial derivative = new Polynomial(new int[coefficients.length - 1]);
 		for (int i = 1; i < coefficients.length; i++) {
-			derivative.coefficients[i - 1] = i * coefficients[i]; // ! throws indexoutofbounds exception
+			derivative.coefficients[i - 1] = i * coefficients[i]; 
 		}
 		return derivative;
 	}

@@ -44,8 +44,44 @@ public class Lab2_Recursion {
         return base * exponentRecursion(base, power - 1);
     }
 
+    //* Recursion Practice 2/4/2025 */
     public static int largestNumber(int[] numbers, int index) {
         if (index == 0) {return numbers[0];}
         return java.lang.Math.max(numbers[index], largestNumber(numbers, index - 1));
     }
+
+    public static int largest(int[] numbers, int index) {
+        if (index == 0) {
+          return numbers[0];
+        }
+        return Math.max(numbers[index], largest(numbers, index-1));
+      }
+    
+    public static int multiply(int x, int y) {
+        if (x == 1) {
+            return y;
+        } else {
+            return multiply(x - 1, y) + y;
+        }
+      }    
+
+    public static int GCD(int x, int y) {
+        if (x % y == 0) {
+            return y;
+        } else {
+            return GCD(y, x % y);
+        }
+    }
+
+    public static int countChr(String str) {
+        if (str.length() == 0) {
+          return 0;
+        }
+        int count = 0;
+        if (str.substring(0, 1).equals("A")) {
+          count = 1;
+        }
+        return count + countChr(str.substring(1, str.length()));
+                                }
+      
 }
