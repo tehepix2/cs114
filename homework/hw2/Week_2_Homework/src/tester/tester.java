@@ -20,7 +20,7 @@ public class tester {
 		polynomialMethods();
 		
 		// Test 3 - subclasses
-		//subclassesTests();
+		subclassesTests();
 	}
 	
 	// Test 1 - print polynomials
@@ -85,7 +85,7 @@ public class tester {
 		testPolynomials[2].add(l1);
 		System.out.println(String.format("p2+l1: %s , degree %s", testPolynomials[2], 
 				testPolynomials[2].getDegree()));
-		
+		System.out.println(l1.toString());
 		System.out.println("l1 solutions: " + Arrays.toString(l1.solve()));
 		System.out.println("q1 solutions: " + Arrays.toString(q1.solve()));
 		System.out.println("q2 solutions: " + Arrays.toString(q2.solve()));
