@@ -16,6 +16,7 @@ public class listExercises {
 		System.out.println(find(al, 1));
 		insertIn(al, 100, 2);
 		System.out.println(find(al, 100));
+		int[] A = new int[4];
 	}
 	
 	/** Print list with position **/
