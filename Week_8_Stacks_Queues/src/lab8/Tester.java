@@ -44,13 +44,32 @@ public class Tester {
 		return (stackL.length() == 0) && (stackR.length() == 0);
 	}
 	
-	public static void maxInQueue(QueueADT<Integer> Q) {
-		
+	public static int maxInQueue(QueueADT<Integer> Q) {
+		QueueADT<Integer> useQ = Q;
+		boolean reachedEnd = false;
+		int greatest = Q.frontValue();
+		while (!reachedEnd) {
+			try {
+				int val = Integer.valueOf(useQ.dequeue());
+				if (useQ.dequeue() > greatest) {
+					greatest = 
+				}
+			}
+
+		}
 	}
 	
 	public static void main(String[] args) {
 		System.out.println(balancedParentheses("[]{}[{}]"));
 		System.out.println(balancedParentheses("{}]"));
+		QueueADT<Integer> q = new LQueue<>(5);
+		q.enqueue(5);
+		q.enqueue(4);
+		q.enqueue(9);
+		q.enqueue(12);
+		q.enqueue(2);
+
+
 	}
 
 }

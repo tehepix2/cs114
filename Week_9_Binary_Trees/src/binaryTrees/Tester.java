@@ -28,6 +28,15 @@ public class Tester {
 		BinNode<Character> C = new BinNode<>('C', null, H);
 		BinNode<Character> E = new BinNode<>('E', B, C);
 		
+
+		BinNode<Integer> n7 = new BinNode<>(3, null, null);
+		BinNode<Integer> n6 = new BinNode<>(27, null, null);
+		BinNode<Integer> n5 = new BinNode<>(6, null, n7);
+		BinNode<Integer> n4 = new BinNode<>(14, null, null);
+		BinNode<Integer> n3 = new BinNode<>(10, n5, n6);
+		BinNode<Integer> n2 = new BinNode<>(5, n4, null);
+		BinNode<Integer> n1 = new BinNode<>(72, n2, n3);
+
 		preOrder(E);
 		System.out.println();
 		inOrder(E);
@@ -36,18 +45,40 @@ public class Tester {
 		System.out.println();
 		
 		System.out.println(countLevels(B));
+
+		preOrder(n1);
 	}
 	
 	public static <E> void preOrder(BinNode<E> rt) {
+		if (rt != null) {
+			System.out.println(rt.value());
+			preOrder(rt.left());
+			preOrder(rt.right());
+		}
+		
+
 	}
 	
 	public static <E> void postOrder(BinNode<E> rt) {
+		if (rt != null) {
+			preOrder(rt.left());
+			preOrder(rt.right());
+			System.out.println(rt.value());
+		}
 	}
 		
 	public static <E> void inOrder(BinNode<E> rt) {
+		if (rt != null) {
+			preOrder(rt.left());
+			System.out.println(rt.value());
+			preOrder(rt.right());
+			
+		}
 	}
 	
 	public static <T> int countLevels(BinNode<T> rt) {
+		
+		
 		return 0; // stub
 	}
 	
