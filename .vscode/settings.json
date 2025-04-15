@@ -1,0 +1,8 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "homework/hw9",
+        "homework/homework9",
+        "homework"
+    ]
+}
